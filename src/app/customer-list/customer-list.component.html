@@ -1,0 +1,8 @@
+<div ngbDropdown class="d-inline-block">
+    <button type="button" class="btn btn-outline-primary" id="dropdownBasic" ngbDropdownToggle>
+        Customers
+    </button>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic">
+        <app-customer *ngFor="let customer of customers | async" [customer]="customer"></app-customer>
+    </div>
+</div>
