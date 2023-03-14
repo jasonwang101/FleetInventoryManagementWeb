@@ -4,11 +4,16 @@ import { map, Observable } from 'rxjs';
 import { Customer } from '../models/customer';
 import { Fleet } from '../models/fleet';
 import { Query } from '../models/query';
+import { Vehicle } from '../models/vehicle';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataQueryService {
+  private customers?: Array<Customer>;
+  private fleets?: Array<Fleet>;
+  private vehicles?: Array<Vehicle>;
+
   constructor(private apollo: Apollo) { }
 
   GetAllCustomers(): Observable<Customer[]> {
