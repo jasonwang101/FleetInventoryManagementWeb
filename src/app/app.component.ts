@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  showLandingPage : boolean = false;
+  showLandingPage : boolean = true;
 
   dismissLanding(event:boolean)
   {

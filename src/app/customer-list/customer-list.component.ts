@@ -15,6 +15,6 @@ export class CustomerListComponent {
 
   ngOnInit()
   {
-    this.customers = this.dataQueryService.GetAllCustomers();
+    this.customers = this.dataQueryService.GetCustomers();
   }
 }
