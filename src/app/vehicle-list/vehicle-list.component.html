@@ -1,2 +1,24 @@
-<h3>Your Vehicles</h3>
-<app-vehicle></app-vehicle>
+<div *ngIf="vehicles">
+    <hr>
+    <h3>Your Vehicles</h3>
+    <table class="table table-striped">
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Name</th>
+				<th scope="col">Make</th>
+				<th scope="col">Model</th>
+				<th scope="col">Color</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let vehicle of vehicles | async">
+				<th scope="row">{{ vehicle.vehicleId }}</th>
+				<td>{{ vehicle.name }}</td>
+				<td>{{ vehicle.make }}</td>
+				<td>{{ vehicle.model }}</td>
+				<td>{{ vehicle.color }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

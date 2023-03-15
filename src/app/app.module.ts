@@ -10,7 +10,6 @@ import { DataQueryService } from './services/data-query.service';
 import { FleetComponent } from './fleet/fleet.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { CustomerComponent } from './customer/customer.component';
-import { VehicleComponent } from './vehicle/vehicle.component';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
@@ -21,7 +20,6 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     FleetComponent,
     CustomerListComponent,
     CustomerComponent,
-    VehicleComponent,
     VehicleListComponent,
     LandingPageComponent
   ],

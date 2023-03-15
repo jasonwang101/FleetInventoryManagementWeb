@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Customer } from '../models/customer';
+import { DataQueryService } from '../services/data-query.service';
 
 @Component({
   selector: 'app-customer',
@@ -9,18 +10,15 @@ import { Customer } from '../models/customer';
 export class CustomerComponent {
   @Input() customer?: Customer;
 
-  ngOnInit()
+  constructor(private dataQueryService : DataQueryService) {}
+
+  onClick()
   {
-
-  }
-
-  ngOnDestroy()
-  {
-
-  }
-
-  onClick(customer?: number)
-  {
-
+    if (this.customer)
+    {
+      this.dataQueryService.customerName = this.customer.name;
+      this.dataQueryService.SetCustomerId(this.customer.customerId);
+      this.dataQueryService.SetFleetId(-1);
+    }
   }
 }
